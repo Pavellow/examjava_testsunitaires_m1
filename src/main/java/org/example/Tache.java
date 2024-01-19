@@ -4,11 +4,17 @@ public class Tache {
     private String titre;
     private String description;
     private boolean completee;
+    private double duree;
 
-    public Tache(String titreParam, String description, boolean completeeParam) {
+    public Tache(String titreParam, String description, boolean completeeParam, double duree) {
         this.titre = titreParam;
         this.description = description;
         this.completee = completeeParam;
+        this.duree = duree;
+    }
+
+    public double getDuree() {
+        return this.duree;
     }
 
     public String toString() {

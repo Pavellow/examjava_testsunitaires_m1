@@ -28,7 +28,7 @@ public class Projet {
     }
 
     public boolean ajouterTache(String titreTache, String descriptionTache) {
-        return taches.add(new Tache(titreTache, descriptionTache, false));
+        return taches.add(new Tache(titreTache, descriptionTache, false, 2.0));
     }
 
     public boolean ajouterClasseTache(Tache tache) {
@@ -71,6 +71,14 @@ public class Projet {
         }
 
         return null;
+    }
+
+    public double calculerDureeTotale(ArrayList<Tache> taches) {
+        double dureeTotale = 0.0;
+        for(Tache tache : taches) {
+            dureeTotale = dureeTotale + tache.getDuree();
+        }
+        return dureeTotale;
     }
 
 }

@@ -13,7 +13,7 @@ public class GestionTache {
     }
 
     public boolean ajouterTache(String titreTache, String descriptionTache) {
-        return taches.add(new Tache(titreTache, descriptionTache, false));
+        return taches.add(new Tache(titreTache, descriptionTache, false, 2.0));
     }
 
     public boolean ajouterClasseTache(Tache tache) {

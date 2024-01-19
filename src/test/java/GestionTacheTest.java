@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class GestionTacheTest {
 
-    private Tache tachetest = new Tache("tester", "tache de test", false);
+    private Tache tachetest = new Tache("tester", "tache de test", false, 2.0);
     private ArrayList<Tache> taches = new ArrayList<Tache>();
     private Projet projet = new Projet("projet_test", taches);
     private GestionTache gt = new GestionTache(projet);
