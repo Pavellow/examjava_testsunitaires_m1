@@ -2,14 +2,29 @@ package org.example;
 
 import java.util.ArrayList;
 
-public class GestionTache {
-
-    private Projet projet;
+public class Projet {
+    private String nomProjet;
     private ArrayList<Tache> taches;
 
-    public GestionTache(Projet projetParam) {
-        this.projet = projetParam;
-        this.taches = projet.getTaches();
+    public Projet(String nomParam, ArrayList<Tache> tachesParam) {
+        this.nomProjet = nomParam;
+        this.taches = tachesParam;
+    }
+
+    public ArrayList<Tache> getTaches() {
+        return this.taches;
+    }
+
+    public String getNomProjet() {
+        return nomProjet;
+    }
+
+    public void setNomProjet(String nomProjet) {
+        this.nomProjet = nomProjet;
+    }
+
+    public void setTaches(ArrayList<Tache> taches) {
+        this.taches = taches;
     }
 
     public boolean ajouterTache(String titreTache, String descriptionTache) {
@@ -28,10 +43,6 @@ public class GestionTache {
             }
         }
         return false;
-    }
-
-    public ArrayList<Tache> getTaches() {
-        return this.taches;
     }
 
     public void resetTaches() {

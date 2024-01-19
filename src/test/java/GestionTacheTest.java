@@ -1,4 +1,5 @@
 import org.example.GestionTache;
+import org.example.Projet;
 import org.example.Tache;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -11,8 +12,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class GestionTacheTest {
 
-    public Tache tachetest = new Tache("tester", "tache de test", false);
-    public GestionTache gt = new GestionTache(new ArrayList<>());
+    private Tache tachetest = new Tache("tester", "tache de test", false);
+    private ArrayList<Tache> taches = new ArrayList<Tache>();
+    private Projet projet = new Projet("projet_test", taches);
+    private GestionTache gt = new GestionTache(projet);
 
     @BeforeEach
     public void setup() {

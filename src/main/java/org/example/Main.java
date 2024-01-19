@@ -4,13 +4,14 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Tache tache = new Tache("tache 1", "desc1", false);
-        ArrayList<Tache> taches = new ArrayList<>();
-        GestionTache gt = new GestionTache(taches);
-        gt.ajouterTache("aa", "bb");
-        gt.ajouterClasseTache(tache);
+        System.out.println("Hello World");
+        ArrayList<Tache> taches = new ArrayList<Tache>();
+        Projet projet = new Projet("projet1", taches);
+        GestionTache gt = new GestionTache(projet);
 
-        gt.verifierTache("tache 1");
+        gt.ajouterTache("tache1", "description1");
+
+        System.out.println(projet.getTaches());
 
     }
 }
